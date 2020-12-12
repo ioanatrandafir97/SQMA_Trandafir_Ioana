@@ -39,5 +39,13 @@ public class TestGetFrequencyOfMaxNumberInArray {
 		int[] elements = {};
 		Calculator.getFrequencyOfMaxNumberInArray(elements);
 	}
+	
+	@Test
+	public void testGetFrequencyOfMaxNumberInArrayReturnsCorrectResultForMaxValues() {
+		int[] elements = {Integer.MAX_VALUE, 100, 2000, 5, Integer.MAX_VALUE};
+		int expectedFrequency = 2;
+		int actualFrequency = Calculator.getFrequencyOfMaxNumberInArray(elements);
+		assertEquals(expectedFrequency, actualFrequency);
+	}
 
 }
